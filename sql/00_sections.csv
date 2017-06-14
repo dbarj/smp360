@@ -1,0 +1,24 @@
+-- Add or remove new Sections in this file. No need to update anywhere else.
+-- Use "," as field separator
+-- Format: Section ID [1a - 9z], File Sufix Name, Section Description, Skip Variables (If last field is empty or its variables return NULL, sql WILL be executed)
+--
+1a,using_html_output.sql,'Sample HTML Output'
+1b,using_txt_output.sql,'Sample TXT Output'
+1c,using_csv_output.sql,'Sample CSV Output'
+1d,using_all_output.sql,'Sample All Output'
+1e,other_control_features.sql,'Control Features'
+--
+2a,line_chart.sql,'Sample Line Chart'
+2b,pie_chart.sql,'Sample Pie Chart'
+2c,bar_chart.sql,'Sample Bar Chart'
+2d,arrow_graph.sql,'Sample Arrow Graph'
+--
+3a,text_spool.sql,'Sample TEXT File'
+3b,html_spool.sql,'Sample HTML Spool'
+--
+4a,test_skip1.sql,'This Section will only run if Version < 10gR2',&&skip_ver_ge_10_2.
+4b,test_skip2.sql,'This Section will only run if Version > 10gR2',&&skip_ver_le_10_2.
+4c,test_skip3.sql,'This Section will skip some topics'
+--
+-- Note: You can optionally have sections 0a_pre.sql and 0b_post.sql (not defined on this csv).
+-- They are not mandatory and they instruct moat to run only once a initial sql before all of them (0a) or after all of them (0b).
