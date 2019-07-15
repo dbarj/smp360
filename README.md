@@ -15,20 +15,38 @@ In Sample 360 you will see in action:
 
 OBS: The zip file in root directory is a sample HTML output.
 
-## Steps ##
+## Execution Steps ##
 
-1. Unzip smp360_master.zip, navigate to the root smp360_master directory, and connect as SYS, 
-   DBA, or any User with Data Dictionary access:
+1. Download and unzip latest smp360 version and, navigate to the root of smp360-master directory:
 
-   $ unzip smp360_master.zip
-   $ cd smp360_master
-   $ sqlplus / as sysdba
+```
+$ wget -O smp360.zip https://github.com/dbarj/smp360/archive/master.zip
+$ unzip smp360.zip
+$ cd smp360-master/
+```
 
-2. Execute smp360.sql indicating if your database is licensed for the Oracle Tuning Pack, 
-   the Diagnostics Pack or None [ T | D | N ]. Example below specifies Tuning Pack.
+2. Download and unzip latest moat369 API inside smp360_master directory. Rename extract folder to moat369:
 
-   SQL> @smp360.sql T
-   
-3. Unzip output smp360_<dbname>_<host>_YYYYMMDD_HH24MI.zip into a directory on your PC
+```
+$ wget -O moat369.zip https://github.com/dbarj/moat369/archive/master.zip
+$ unzip moat369.zip
+$ mv moat369-master/* moat369/
+```
 
-4. Review main html file 00001_smp360_<dbname>_index.html
+3. Connect as SYS, DBA, or any User with Data Dictionary access:
+
+```
+$ sqlplus / as sysdba
+```
+
+4. Execute smp360.sql:
+
+```
+SQL> @smp360.sql
+```
+
+## Results ##
+
+1. Unzip output **smp360_dbname_hostname_YYYYMMDD_HH24MI.zip** into a directory on your PC.
+
+2. Review main html file **00001_smp360_dbname_index.html**.
