@@ -4,7 +4,7 @@ DEF in_filename = '/etc/passwd'
 
 HOS if [ -f /etc/passwd ]; then cat /etc/passwd > ospasswd.txt; fi
 
-DEF one_spool_text_file = 'ospasswd.txt'
+DEF one_spool_text_file = './ospasswd.txt'
 DEF one_spool_text_file_rename = 'Y'
 DEF skip_html = '--'
 DEF skip_text_file = ''
